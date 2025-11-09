@@ -1,0 +1,109 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 25, 41, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.navbar.scrolled {
+  background: rgba(10, 25, 41, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 212, 255, 0.1);
+  padding: 20px 0;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.logo-text {
+  color: var(--text-primary);
+}
+
+.logo-dot {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+}
+
+.navbar-menu li {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.navbar-menu li a {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.navbar-menu li:hover a {
+  color: var(--text-primary);
+}
+
+.navbar-menu li.active a {
+  color: var(--accent-color);
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-menu li.active .nav-underline {
+  width: 100%;
+}
+
+.navbar-menu li:hover .nav-underline {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-menu {
+    gap: 25px;
+  }
+
+  .navbar-menu li a {
+    font-size: 0.8rem;
+  }
+
+  .navbar-logo {
+    font-size: 1rem;
+  }
+}
