@@ -4,9 +4,16 @@ import './Navbar.css';
 const Navbar = ({ scrollY }) => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [lineWidth, setLineWidth] = useState(0);
 
   useEffect(() => {
     setIsScrolled(scrollY > 50);
+    
+    // Calculate the width of the growing line based on scroll
+    // Line grows from 0% to 100% as you scroll down
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = Math.min((scrollY / maxScroll) * 100, 100);
+    setLineWidth(scrollPercentage);
     
     // Detect which section is in view based on scroll position
     const sections = ['home', 'about', 'projects', 'contact'];
@@ -59,6 +66,8 @@ const Navbar = ({ scrollY }) => {
           </li>
         </ul>
       </div>
+      {/* Growing line below navbar that extends on scroll */}
+      <div className="navbar-progress-line" style={{ width: `${lineWidth}%` }}></div>
     </nav>
   );
 };

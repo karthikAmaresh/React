@@ -5,40 +5,22 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Complete redesign of shopping experience",
-      tags: ["UX Research", "UI Design", "Prototyping"],
-      year: "2024"
+      head: "HEAD",
+      title: "Title",
+      description: "description"
     },
     {
       id: 2,
-      title: "Healthcare App",
-      description: "Patient management system",
-      tags: ["Mobile Design", "User Testing"],
-      year: "2023"
-    },
-    {
-      id: 3,
-      title: "Financial Dashboard",
-      description: "Data visualization and analytics",
-      tags: ["Dashboard", "Data Viz"],
-      year: "2023"
-    },
-    {
-      id: 4,
-      title: "Educational Platform",
-      description: "Online learning experience",
-      tags: ["Web Design", "Interaction"],
-      year: "2022"
+      head: "HEAD",
+      title: "Title",
+      description: "description"
     }
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <h2 className="projects-title">
-          <span className="title-icon">●</span> Projects
-        </h2>
+        <h2 className="projects-title">Projects</h2>
 
         <div className="projects-grid">
           {projects.map((project, index) => (
@@ -51,41 +33,41 @@ const Projects = () => {
                 <div className="project-placeholder">
                   {/* Project image placeholder */}
                 </div>
-                <div className="project-overlay">
-                  <button className="view-project-btn">View Project</button>
-                </div>
               </div>
               <div className="project-info">
-                <div className="project-header">
-                  <h3 className="project-title">{project.title}</h3>
-                  <span className="project-year">{project.year}</span>
-                </div>
+                <span className="project-head">{project.head}</span>
+                <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                <div className="project-tags">
-                  {project.tags.map((tag, idx) => (
-                    <span key={idx} className="project-tag">{tag}</span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
         </div>
 
         <div className="check-this-out">
+          <h2 className="cto-title">Check This Out</h2>
           <div className="cto-card">
-            <h3>research paper/ white paper</h3>
-            <p>Exploring design methodologies and user behavior patterns</p>
-            <button className="cto-btn">Read More</button>
+            <div className="cto-content">
+              <p className="cto-text">research paper/<br/>white paper</p>
+            </div>
+            <div className="cto-footer">
+              <span className="cto-head">HEAD</span>
+              <h4 className="cto-card-title">Title</h4>
+              <p className="cto-description">description</p>
+            </div>
           </div>
         </div>
 
         <div className="credentials">
-          <div className="credential-badge">
-            <img src="/api/placeholder/100/100" alt="Certification" className="badge-img" />
+          <div className="credential-logo">
+            <div className="logo-placeholder">
+              {/* Logo placeholder */}
+            </div>
           </div>
-          <div className="credential-info">
-            <h4>Sign in to see more</h4>
-            <p>View detailed case studies and process documentation</p>
+          <div className="credential-circle">
+            <div className="circle-placeholder"></div>
+          </div>
+          <div className="credential-text">
+            <p>logo in this color</p>
           </div>
         </div>
       </div>

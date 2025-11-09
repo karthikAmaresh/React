@@ -10,29 +10,23 @@
 }
 
 .projects-title {
-  font-size: 2.5rem;
-  color: var(--text-primary);
-  margin-bottom: 60px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.title-icon {
+  font-size: 2rem;
   color: var(--accent-color);
-  font-size: 1.2rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-bottom: 80px;
 }
 
 .project-card {
-  background: rgba(19, 47, 76, 0.4);
-  border: 2px solid rgba(0, 212, 255, 0.1);
+  background: transparent;
+  border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -42,13 +36,13 @@
 
 .project-card:hover {
   border-color: var(--accent-color);
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
 }
 
 .project-image {
   width: 100%;
-  height: 300px;
+  height: 350px;
   position: relative;
   overflow: hidden;
 }
@@ -56,89 +50,33 @@
 .project-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(91, 156, 255, 0.2), rgba(0, 212, 255, 0.2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 25, 41, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.view-project-btn {
-  padding: 12px 30px;
-  background: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.view-project-btn:hover {
-  background: var(--accent-color);
-  color: var(--primary-bg);
-  transform: scale(1.05);
+  background: rgba(19, 47, 76, 0.3);
 }
 
 .project-info {
   padding: 25px;
 }
 
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+.project-head {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-primary);
   font-weight: 600;
-}
-
-.project-year {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .project-description {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.project-tag {
-  padding: 6px 15px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid var(--accent-color);
-  border-radius: 15px;
-  color: var(--accent-color);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 /* Check This Out Section */
@@ -146,90 +84,114 @@
   margin: 80px 0;
 }
 
+.cto-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 .cto-card {
-  background: rgba(19, 47, 76, 0.6);
-  border: 2px solid var(--accent-blue);
+  background: transparent;
+  border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 12px;
-  padding: 40px;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  overflow: hidden;
+  max-width: 400px;
   transition: all 0.3s ease;
 }
 
 .cto-card:hover {
+  border-color: var(--accent-color);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(91, 156, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
 }
 
-.cto-card h3 {
-  font-size: 1.8rem;
-  color: var(--text-primary);
-  margin-bottom: 15px;
-  text-transform: lowercase;
+.cto-content {
+  height: 250px;
+  background: rgba(19, 47, 76, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cto-card p {
+.cto-text {
+  font-size: 1.5rem;
   color: var(--text-secondary);
-  margin-bottom: 25px;
-  line-height: 1.6;
+  text-align: center;
+  line-height: 1.8;
 }
 
-.cto-btn {
-  padding: 12px 35px;
-  background: var(--accent-blue);
-  border: none;
-  color: white;
-  font-size: 1rem;
+.cto-footer {
+  padding: 25px;
+}
+
+.cto-head {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cto-card-title {
+  font-size: 1.3rem;
+  color: var(--text-primary);
   font-weight: 600;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin-bottom: 10px;
 }
 
-.cto-btn:hover {
-  background: var(--accent-color);
-  transform: scale(1.05);
-  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+.cto-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* Credentials Section */
 .credentials {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  gap: 40px;
   padding: 40px;
-  background: rgba(19, 47, 76, 0.3);
-  border-radius: 12px;
   margin-top: 60px;
 }
 
-.credential-badge {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: rgba(0, 212, 255, 0.2);
+.credential-logo {
+  width: 120px;
+  height: 80px;
+  background: rgba(19, 47, 76, 0.3);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--accent-color);
 }
 
-.badge-img {
+.logo-placeholder {
   width: 80%;
-  height: 80%;
+  height: 60%;
+}
+
+.credential-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(91, 156, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-placeholder {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
-.credential-info h4 {
-  font-size: 1.3rem;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-
-.credential-info p {
+.credential-text p {
   color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 @media (max-width: 968px) {
